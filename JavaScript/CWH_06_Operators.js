@@ -4,6 +4,7 @@
 // All these three lines are valid in JS
 
 console.log("Operators in JS")
+
 // Arithmetic Operators
 
 let a = 10;
@@ -57,7 +58,7 @@ console.log("comp1 !== comp2 is ", comp1 !== comp2)
 let x = 5;
 let y = 6;
 console.log(x<y && x!=y)    // In && operator TT = T, TF = F, FT = F, FF = F
-                            // In && operator, If both conditions is True then only it returns true
+                            // In && operator, If both conditions is True then only it will return true
 console.log(x<y || x==y)    // In || (or or) operator, if any one condition is true then it will return true
 console.log(!true)          // This is not operator (!)
 console.log(!false)
