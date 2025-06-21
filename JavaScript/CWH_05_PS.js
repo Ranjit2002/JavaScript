@@ -41,3 +41,5 @@ console.log(dict)
 console.log(dict.appreciate)
 console.log(dict["ataraxia"])
 console.log(dict.yakka)
+
+console.log(!true)
