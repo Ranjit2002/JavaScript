@@ -17,7 +17,7 @@
 //     console.log("This is after readline");
 //
 //     readline.close();
-// });
+// });                                  // Currently, I don't know the logic of line 13-20 logic
 
 a = "34"
 console.log(typeof a);
