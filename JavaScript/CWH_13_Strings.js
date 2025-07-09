@@ -26,6 +26,7 @@ console.log(fruit)
 let quote = "He is \ta boy" // \t . It will print tab space
 console.log(quote)
 
-let name2 = "Snap\rdragon"
+// let name2 = "Snap\rdragon"  // \r .
+let name2 = "Sa\rchin"  // \r .
 console.log(name2)
 
