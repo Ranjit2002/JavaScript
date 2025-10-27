@@ -1,7 +1,7 @@
 // alert("Hello your script works!")
 
 alert("Enter the value of a")
-let a = prompt("Enter a here", "578")
+let a = prompt("Enter a here", "578")   // 578 is a default value.
 a = Number.parseInt(a);
 alert("You entered a of type " + typeof(a))
 
