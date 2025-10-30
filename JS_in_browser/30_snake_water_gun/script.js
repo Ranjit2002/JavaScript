@@ -25,29 +25,29 @@ while (playAgain) {
 
     if (user == "snake") {
         if (computer == "snake") {
-            alert(`Game Draw!\nUser Choice: ${user}\n Computer Choice: ${computer}`)
+            alert(`Game Draw!\nUser Choice: ${user}\nComputer Choice: ${computer}`)
         } else if (computer == "water") {
-            alert(`User wins!...\nUser Choice: ${user}\n Computer Choice: ${computer}`)
+            alert(`User wins!...\nUser Choice: ${user}\nComputer Choice: ${computer}`)
         } else {
-            alert(`Computer wins!...\nUser Choice: ${user}\n Computer Choice: ${computer}`)
+            alert(`Computer wins!...\nUser Choice: ${user}\nComputer Choice: ${computer}`)
         }
     }
     else if (user == "water") {
         if (computer == "snake") {
-            alert(`Computer wins!...\nUser Choice: ${user}\n Computer Choice: ${computer}`)
+            alert(`Computer wins!...\nUser Choice: ${user}\nComputer Choice: ${computer}`)
         } else if (computer == "water") {
-            alert(`Game Draw!...\nUser Choice: ${user}\n Computer Choice: ${computer}`)
+            alert(`Game Draw!...\nUser Choice: ${user}\nComputer Choice: ${computer}`)
         } else {
-            alert(`User wins!...\nUser Choice: ${user}\n Computer Choice: ${computer}`)
+            alert(`User wins!...\nUser Choice: ${user}\nComputer Choice: ${computer}`)
         }
     }
     else if (user == "gun") {
         if (computer == "snake") {
-            alert(`User wins!...\nUser Choice: ${user}\n Computer Choice: ${computer}`)
+            alert(`User wins!...\nUser Choice: ${user}\nComputer Choice: ${computer}`)
         } else if (computer == "water") {
-            alert(`Computer wins!...\nUser Choice: ${user}\n Computer Choice: ${computer}`)
+            alert(`Computer wins!...\nUser Choice: ${user}\nComputer Choice: ${computer}`)
         } else {
-            alert(`Game Draw!...\nUser Choice: ${user}\n Computer Choice: ${computer}`)
+            alert(`Game Draw!...\nUser Choice: ${user}\nComputer Choice: ${computer}`)
         }
     }
     else {
