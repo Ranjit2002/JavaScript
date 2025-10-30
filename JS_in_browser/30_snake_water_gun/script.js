@@ -6,6 +6,7 @@ Use confirm and prompt wherever required.
 */
 
 /*
+
     Win                     Loss
 
 Snake - Water           Snake - Gun
