@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    background-color: black;
+}
+
+nav ul{
+    display: flex;
+    color: yellow;
+    padding: 15px;
+    gap: 18px;
+}
+
+nav ul li{
+    list-style: none;
+    font-size: 20px;
+}
+
+.container{
+    display: flex;
+    margin: 15px;
+    font-size: 30px;
+    gap: 30px;
+}
