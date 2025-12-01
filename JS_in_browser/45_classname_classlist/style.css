@@ -1,0 +1,18 @@
+*{
+    margin: 10px;
+    padding: 0;
+}
+
+.yellow{
+    background-color: yellow;
+    color: white;
+}
+
+.red{
+    background-color: red;
+    color: white;
+}
+
+.text-black{
+    color: black;
+}
