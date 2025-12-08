@@ -28,20 +28,22 @@ const loadScript = (src) => {
     script.src = src;
     document.body.appendChild(script);
     script.onload = () => {
-        resolve("Script has been loaded sir");
+      resolve("Script has been loaded sir");
     };
-    script.onerror =()=>{
-        reject(0);
-    }
+    script.onerror = () => {
+      reject(0);
+    };
   });
 };
 
-let p1 = loadScript("https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js")
-p1.then((value)=>{
-    console.log(value);
-    return loadScript("https://code.jquery.com/jquery-3.7.1.js")
-}).then((value)=>{
-    console.log("Second script ready")
-}).catch((error)=>{
+let p1 = loadScript(
+  "https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+);
+p1.then((value) => {
+  console.log(value);
+  return loadScript("https://code.jquery.com/jquery-3.7.1.js");
+}).then((value) => {
+    console.log("Second script ready");
+}).catch((error) => {
     console.log("We are sorry but we are having problems loading this script.");
-})
+});
