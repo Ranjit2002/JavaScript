@@ -3,7 +3,7 @@ setTimeout(() => {
 }, 1000);
 
 try{
-        console.log(Rahul);
+    console.log(Rahul);
 }
 catch(err){
     console.log("Balle balle" + err);
