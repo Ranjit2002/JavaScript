@@ -18,41 +18,99 @@ class Password{
 
 class Password {
 
-    constructor() {
-        this.Password = "";
+  constructor() {
+    this.Password = "";
+  }
+
+  shuffle(str) {
+    return str
+      .split("")
+      .sort(() => Math.random() - 0.5)
+      .join("");
+  }
+
+  generateStrongPassword(length = 8) {
+    let lower = "abcdefghijklmnopqrstuvwxyz";
+    let upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    let special = "!@#$%^&*()_+[]{}<>?/";
+
+    let pass =
+      lower[Math.floor(Math.random() * lower.length)] +
+      upper[Math.floor(Math.random() * upper.length)] +
+      special[Math.floor(Math.random() * special.length)]
+
+    const all = lower + upper + special;
+
+    for (let i = pass.length; i < length; i++) {
+      pass += all[Math.floor(Math.random() * all.length)]
     }
 
-    generateStrongPassword(length = 8) {
-        let lower = "abcdefghijklmnopqrstuvwxyz"
-        let upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-        let special = "!@#$%^&*()_+[]{}<>?/";
+    this.Password = this.shuffle(pass);
+    return this.Password;
+  }
 
-        let pass =
-            [Math.floor(Math.random * lower.length)] +
-            [Math.floor(Math.random * upper.length)] +
-            [Math.floor(Math.random * special.length)]
+  generateWeakPassword(length = 5) {
+    const chars = "abcdefghijklmnopqrstuvwxyz1234567890"
 
-        const all = lower + upper + special
+    let pass = ""
 
-        for (i = pass.length; i < length; i++) {
-            pass += all[Math.floor(Math.random * all.length)]
-        }
+    for (let i = 1; i < length; i++) {
+      pass += chars[Math.floor(Math.random() * chars.length)]
     }
 
-    generateWeakPassword() {
+    this.Password = pass;
+    return this.Password;
 
+  }
+
+  generateSuperStrongPassword(length = 15) {
+    const lower = "abcdefghijklmnopqrstuvwxyz"
+    const upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+    const special = "!@#$%^&*()_+[]{}<>?/";
+    const number = "1234567890"
+
+
+    let pass = lower[Math.floor(Math.random() * lower.length)] +
+      upper[Math.floor(Math.random() * upper.length)] +
+      special[Math.floor(Math.random() * special.length)] +
+      number[Math.floor(Math.random() * number.length)]
+
+    const all = lower + upper + special + number;
+
+    for (let i = pass.length; i < length; i++) {
+      pass += all[Math.floor(Math.random() * pass.length)]
     }
 
-    generateSuperStrongPassword() {
+    this.Password = this.shuffle(pass);
+    return this.Password;
+  }
 
-    }
+  generateFunnyPassword() {
 
-    generateFunnyPassword() {
+    const funnyPasswords = [
+      "ILoveJS😂",
+      "NoBugPls!",
+      "404NotFound!",
+      "Coffee>Sleep☕",
+      "HackMeIfYouCan😎"
+    ];
 
-    }
+    let pass = ""
+
+    this.Password = 
+      funnyPasswords[Math.floor(Math.random() * funnyPasswords.length)];
+    
+    return this.Password;
+  }
 
 }
 
+let p = new Password();
+
+console.log("Weak Password:- ", p.generateWeakPassword())
+console.log("Strong Password:- ", p.generateStrongPassword())
+console.log("Super Strong Password:- ", p.generateSuperStrongPassword())
+console.log("Funny Password:- ", p.generateFunnyPassword())
 
 
 /*
@@ -138,7 +196,7 @@ class Password {
   }
 }
 
-/* Usage Example */
+// Usage Example 
 const pwd = new Password();
 
 console.log("Weak:", pwd.generateWeakPassword());
