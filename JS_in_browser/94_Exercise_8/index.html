@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./src/output.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <header>
+        <nav class="flex justify-center items-center bg-black text-amber-300 h-12">
+            <ul class="flex gap-7 text-lg">
+                <li>Home</li>
+                <li>About</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="clock"></div>
+        <div class="alarm">
+            <input id="alarmInput" type="number" class="border border-black">
+        </div>
+    </main>
+
+    <footer
+        class="fixed bottom-0 left-0 w-full h-14 flex justify-center items-center bg-linear-to-r/increasing from-indigo-500 to-teal-400 text-black font-semibold  py-2 text-xl">
+        <p>Since 2002 &copy; | All rights reserved</p>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>

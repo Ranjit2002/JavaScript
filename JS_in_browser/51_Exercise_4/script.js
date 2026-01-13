@@ -7,13 +7,13 @@ Try to keep the UI good looking.
 
 */
 
-const updateClock =()=>{
+const updateClock = () => {
     let a = new Date();
     let hours = a.getHours().toString();
     let minutes = a.getMinutes().toString().padStart(2, '0');
     let seconds = a.getSeconds().toString().padStart(2, '0');
 
-     // AM/PM
+    // AM/PM
     let ampm = hours >= 12 ? "PM" : "AM";
 
     // Convert to 12-hour format
