@@ -6,31 +6,89 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./src/output.css" rel="stylesheet">
     <title>Document</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .clock {
+            background: #1e293b;
+            padding: 30px;
+            border-radius: 12px;
+            text-align: center;
+            width: 320px;
+        }
+
+        #time {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+        }
+
+        input,
+        button {
+            padding: 8px 12px;
+            margin: 6px 0;
+            border-radius: 6px;
+            border: none;
+            outline: none;
+        }
+
+        button {
+            cursor: pointer;
+            background: #38bdf8;
+            color: #000;
+            font-weight: bold;
+        }
+    </style>
 </head>
 
 <body>
 
-    <header>
+    <!-- <header>
         <nav class="flex justify-center items-center bg-black text-amber-300 h-12">
             <ul class="flex gap-7 text-lg">
-                <li>Home</li>
-                <li>About</li>
-                <li>Contact</li>
+                <li class="cursor-pointer">Home</li>
+                <li class="cursor-pointer">About</li>
+                <li class="cursor-pointer">Contact</li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <div class="clock"></div>
-        <div class="alarm">
-            <input id="alarmInput" type="number" class="border border-black">
+        <div class="container">
+            <div class="clock text-2xl"></div>
+            <div class="alarm flex flex-col justify-center items-center">
+                <input id="alarmInput" type="number" class="border border-black p-3 text-xl w-[40%] rounded-lg"><br>
+                <button class="bg-violet-500 text-black p-3 text-xl rounded-lg">Set Alarm</button>
+            </div>
         </div>
     </main>
 
     <footer
         class="fixed bottom-0 left-0 w-full h-14 flex justify-center items-center bg-linear-to-r/increasing from-indigo-500 to-teal-400 text-black font-semibold  py-2 text-xl">
         <p>Since 2002 &copy; | All rights reserved</p>
-    </footer>
+    </footer> -->
+
+    <div class="clock">
+        <div id="time">00:00:00</div>
+
+        <input type="time" id="alarmTime">
+        <br>
+        <button id="setAlarm">Set Alarm</button>
+        <button id="clearAlarm">Clear Alarm</button>
+
+        <p id="status"></p>
+    </div>
+
+    <!-- Alarm sound -->
+    <!-- <audio id="alarmSound" src="https://actions.google.com/sounds/v1/alarms/alarm_clock.ogg" preload="auto"></audio> -->
+    <audio id="alarmSound" src="wake_up.mp3" preload="auto"></audio>
 
 
     <script src="script.js"></script>
